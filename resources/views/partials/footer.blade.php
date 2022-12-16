@@ -1,32 +1,4 @@
 <footer id="site-footer">
-<section class="linked">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-lg-5">
-
-                <div class="col d-flex align-items-center py-5 justify-content-center">
-                    <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="">
-                    <p class="mb-0 ms-3"><a href="#">DIGITAL COMICS</a></p>
-                </div>
-                <div class="col d-flex align-items-center py-5 justify-content-center">
-                    <img src="{{Vite::asset('resources/img/buy-comics-merchandise.png')}}" alt="">
-                    <p class="mb-0 ms-3"><a href="#">DC MERCHANDISE</a></p>
-                </div>
-                <div class="col d-flex align-items-center py-5 justify-content-center">
-                    <img src="{{Vite::asset('resources/img/buy-comics-subscriptions.png')}}" alt="">
-                    <p class="mb-0 ms-3"><a href="#">SUBSCRIPTION</a></p>
-                </div>
-                <div class="col d-flex align-items-center py-5 justify-content-center">
-                    <img src="{{Vite::asset('resources/img/buy-comics-shop-locator.png')}}" alt="">
-                    <p class="mb-0 ms-3"><a href="#">COMIC SHOP LOCATOR</a></p>
-                </div>
-                <div class="col d-flex align-items-center py-5 justify-content-center">
-                    <img src="{{Vite::asset('resources/img/buy-dc-power-visa.svg')}}" alt="">
-                    <p class="mb-0 ms-3"><a href="#">DC POWER VISA</a></p>
-                </div>
-
-            </div>
-        </div>
-    </section>
     <section class="list">
         <div class="container d-flex justify-content-between back">
             <div class="col-12 col-lg-5">
@@ -55,9 +27,9 @@
                                 <li><a href="#">
                                         <h4 class="mb-3 text-light">DC</h4>
                                     </a></li>
-                                    @foreach ($links['dc'] as $link)
-                                    <li class="font"><a href="#">{{ $link }}</a></li>
-                                    @endforeach
+                                @foreach ($links['dc'] as $link)
+                                <li class="font"><a href="#">{{ $link }}</a></li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="col">
@@ -65,9 +37,9 @@
                                 <li><a href="#">
                                         <h4 class="mb-3 text-light">SITES</h4>
                                     </a></li>
-                                    @foreach ($links['sites'] as $link)
-                                    <li class="font"><a href="#">{{$link}}</a></li>
-                                    @endforeach
+                                @foreach ($links['sites'] as $link)
+                                <li class="font"><a href="#">{{$link}}</a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

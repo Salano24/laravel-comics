@@ -1,8 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg p-3">
         <div class="container">
-        <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="">
-
+         <a href="{{route('home')}}"><img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="" ></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -11,7 +10,7 @@
                     @foreach ($nav_links as $link)
                     <li class="nav-item my-1">
                         <div class="links ms-auto ">
-                            <a class="mx-3" :href="item.href">
+                            <a class="mx-3" href="#">
                                 {{ $link['text'] }}
                             </a>
                         </div>

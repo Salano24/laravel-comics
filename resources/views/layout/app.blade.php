@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- <link rel="icon" href="./favicon.ico" /> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>@yield('title', 'Welcome')</title>
+<title>DC Comics</title>
 @vite('resources/js/app.js')
 </head>
 <body>

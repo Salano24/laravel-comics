@@ -23,3 +23,14 @@ Route::get('/', function () {
 
     return view('home', $data);
 })->name('home');
+
+Route::get('/description', function () {
+    $data =[
+        'links' => config('footer_link.links'),
+        'items' => config('footer_link.links2'),
+        'nav_links' => config('header_link.menuNav'),
+        'tumblers' => config('db.series'),
+    ];
+
+    return view('description', $data);
+})->name('description');

@@ -10,7 +10,11 @@
             <div class="col">
                 <div class="my_card text-center">
                     <div class="image_card text-center">
+                    @if($tumbler === $tumblers[0])
+                        <a href="{{route('description')}}"> <img src="{{$tumbler['thumb']}}" :alt="title"> </a>
+                        @else
                         <img src="{{$tumbler['thumb']}}" :alt="title">
+                        @endif
                     </div>
                     <h6 class="mt-3">{{$tumbler['series']}}</h6>
                 </div>
@@ -19,5 +23,32 @@
         </div>
     </div>
 </section>
+<section class="linked">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-5">
 
+                <div class="col d-flex align-items-center py-5 justify-content-center">
+                    <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="">
+                    <p class="mb-0 ms-3"><a href="#">DIGITAL COMICS</a></p>
+                </div>
+                <div class="col d-flex align-items-center py-5 justify-content-center">
+                    <img src="{{Vite::asset('resources/img/buy-comics-merchandise.png')}}" alt="">
+                    <p class="mb-0 ms-3"><a href="#">DC MERCHANDISE</a></p>
+                </div>
+                <div class="col d-flex align-items-center py-5 justify-content-center">
+                    <img src="{{Vite::asset('resources/img/buy-comics-subscriptions.png')}}" alt="">
+                    <p class="mb-0 ms-3"><a href="#">SUBSCRIPTION</a></p>
+                </div>
+                <div class="col d-flex align-items-center py-5 justify-content-center">
+                    <img src="{{Vite::asset('resources/img/buy-comics-shop-locator.png')}}" alt="">
+                    <p class="mb-0 ms-3"><a href="#">COMIC SHOP LOCATOR</a></p>
+                </div>
+                <div class="col d-flex align-items-center py-5 justify-content-center">
+                    <img src="{{Vite::asset('resources/img/buy-dc-power-visa.svg')}}" alt="">
+                    <p class="mb-0 ms-3"><a href="#">DC POWER VISA</a></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
 @endsection

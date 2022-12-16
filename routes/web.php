@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $data =[
+        'links' => config('footer_link.links'),
+        'items' => config('footer_link.links2'),
+        'nav_links' => config('header_link.menuNav'),
+        'tumblers' => config('db.series'),
+    ];
+
+    return view('home', $data);
+})->name('home');
